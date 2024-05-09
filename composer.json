@@ -15,7 +15,7 @@
         {
             "name": "Obua Emmanuel",
             "email": "obua.emmanuel@utcl.co.ug",
-            "homepage": "www.utcl.co.ug",
+            "homepage": "https://www.utcl.co.ug",
             "role": "Developer"
         }
     ],
@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\:UTelSms\\": "src"
+            "NotificationChannels\\UTelSms\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\:UTelSms\\Test\\": "tests"
+            "NotificationChannels\\UTelSms\\Test\\": "tests"
         }
     },
     "scripts": {

@@ -4,7 +4,7 @@ namespace NotificationChannels\UTelSms;
 
 use Illuminate\Support\Arr;
 
-class UTelSms
+class UTelSmsMessage
 {
     // Message structure here
 }
