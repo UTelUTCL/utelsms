@@ -1,0 +1,56 @@
+{
+    "name": "laravel-notification-channels/utelsms",
+    "description": "This package makes it easy to send notifications via UTel with Laravel",
+    "keywords": [
+        "utcl",
+        "utel",
+        "laravel",
+        "notification",
+        "notification-channel",
+        "laravel-notification-channel"
+    ],
+    "homepage": "https://github.com/laravel-notification-channels/utelsms",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Obua Emmanuel",
+            "email": "obua.emmanuel@utcl.co.ug",
+            "homepage": "www.utcl.co.ug",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "guzzlehttp/guzzle": "^6.2 || ^7.0",
+        "illuminate/notifications": "5.5 - 11",
+        "illuminate/support": "5.5 - 11"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3",
+        "phpunit/phpunit": "^7.5 || ^8.5.21 || ^9.0 || ^10.0",
+        "orchestra/testbench": "~5.0 || ^6.0 || ^7.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\:UTelSms\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\:UTelSms\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\UTelSms\\UTelSmsServiceProvider"
+            ]
+        }
+    }
+}
