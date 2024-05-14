@@ -8,4 +8,9 @@ class CouldNotSendNotification extends \Exception
     {
         return new static("Oops! Something went wrong while sending the notification. Please try again later.");
     }
+
+    public static function invalidReceiver()
+    {
+        return new static("Oops! Something went wrong while sending the notification. Please try again later.");
+    }
 }

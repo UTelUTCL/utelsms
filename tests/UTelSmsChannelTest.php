@@ -129,7 +129,7 @@ class TestNotification extends Notification
      *
      * @throws CouldNotSendNotification
      */
-    public function toAfricasTalking($notifiable)
+    public function toUTelSms($notifiable)
     {
         return new UTelSmsMessage();
     }
@@ -143,7 +143,7 @@ class TestNotificationWithGetTo extends Notification
      *
      * @throws CouldNotSendNotification
      */
-    public function toAfricasTalking($notifiable)
+    public function toUTelSms($notifiable)
     {
         return (new UTelSmsMessage())
                     ->to('+22222222222');

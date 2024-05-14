@@ -33,7 +33,8 @@
     },
     "autoload": {
         "psr-4": {
-            "UTel\\UTelSms\\": "src"
+            "UTel\\UTelSms\\": "src",
+            "UTel\\UTelSms\\Test\\": "tests"
         }
     },
     "autoload-dev": {
