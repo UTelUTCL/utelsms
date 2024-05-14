@@ -1,34 +1,40 @@
 <?php
 
-namespace NotificationChannels\UTelSms;
+namespace UTel\UTelSms;
 
+use UTel\SDK\UTel as UTelSDK;
 use Illuminate\Support\ServiceProvider;
+use UTel\UTelSms\Exceptions\InvalidConfiguration;
 
 class UTelSmsServiceProvider extends ServiceProvider
 {
+
     /**
      * Bootstrap the application services.
      */
     public function boot()
     {
-        // Bootstrap code here.
-
         /**
-         * Here's some example code we use for the pusher package.
-
-        $this->app->when(Channel::class)
-            ->needs(Pusher::class)
-            ->give(function () {
-                $pusherConfig = config('broadcasting.connections.pusher');
-
-                return new Pusher(
-                    $pusherConfig['key'],
-                    $pusherConfig['secret'],
-                    $pusherConfig['app_id']
-                );
-            });
+         * Bootstrap the application services.
          */
+        $this->app->when(UTelSmsChannel::class)
+            ->needs(UTelSDK::class)
+            ->give(function () {
 
+                $baseDomain = config('services.utelsms.baseDomain');
+                $token = config('services.utelsms.token');
+
+                if (is_null($baseDomain) || is_null($token)) {
+                    throw InvalidConfiguration::configurationNotSet();
+                }
+
+                $utel = new UTelSDK(
+                    $baseDomain,
+                    $token
+                );
+
+                return $utel;
+            });
     }
 
     /**
@@ -36,5 +42,7 @@ class UTelSmsServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
     }
+
 }

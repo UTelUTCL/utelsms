@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\UTelSms\Exceptions;
+namespace UTel\UTelSms\Exceptions;
 
 class CouldNotSendNotification extends \Exception
 {

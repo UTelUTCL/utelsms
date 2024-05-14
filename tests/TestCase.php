@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\UTelSms\Test;
+namespace UTel\UTelSms\Test;
 
 use Mockery;
 
