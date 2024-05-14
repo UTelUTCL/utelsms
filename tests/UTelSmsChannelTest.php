@@ -115,9 +115,9 @@ class NotifiableWithMethod
     /**
      * @return string
      */
-    public function routeNotificationForAfricasTalking()
+    public function routeNotificationForUTelSms()
     {
-        return '+2341111111111';
+        return '716094006';
     }
 }
 
@@ -146,7 +146,7 @@ class TestNotificationWithGetTo extends Notification
     public function toUTelSms($notifiable)
     {
         return (new UTelSmsMessage())
-                    ->to('+22222222222');
+                    ->to('716094006');
     }
 }
 
@@ -161,7 +161,7 @@ class Notifiable
 
 class NotifiableWithAttribute
 {
-    public $phone_number = '+22222222222';
+    public $phone_number = '716094006';
 
     public function routeNotificationFor()
     {
