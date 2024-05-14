@@ -1,5 +1,5 @@
 {
-    "name": "laravel-notification-channels/utelsms",
+    "name": "utcl/utelsms",
     "description": "This package makes it easy to send notifications via UTel with Laravel",
     "keywords": [
         "utcl",
